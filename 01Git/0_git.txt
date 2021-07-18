@@ -1,0 +1,295 @@
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+Якщо ви хочете, перевизначити ім’я або адресу електронної пошти для конкретних проектів, ви можете виконати цю ж команду без опції --global в каталозі необхідного проекту.
+
+$ git config --global core.editor vim
+
+$ git config --global --list
+(or cat ~/.gitconfig)
+
+$ cd /home/user/my_project
+
+
+
+$ git init
+$ git add *.cpp
+$ git commit -m "Перша версія проекту"
+Спрощена команда
+$ git commit -a -m "Перша версія проекту"
+
+
+$ git status
+$ git diff (повний перелік змін)
+
+ВИКЛЮЧЕННЯ ФАЙЛІВ ПРОЄКТУ
+.gitignore:
+
+
+# ігнорувати всі файли .a
+*.a
+# Проте відстежувати lib.a, хоч ми й ігноруємо .a файли вище
+!lib.a
+# Ігнорувати файл TODO тільки в поточній теці, не в інших теках subdir/TODO
+/TODO
+# Ігнорувати усі файли в теці build/
+build/
+# Ігнорувати doc/notes.txt, проте не doc/server/arch.txt
+doc/*.txt
+# Ігнорувати усі .pdf файли в теці doc/ та всіх її підтеках
+doc/**/*.pdf
+
+
+$ git rm --cached README.md
+
+
+$ git mv README.md README
+
+
+ПЕРЕГЛЯД ІСТОРІЇ КОМІТІВ
+
+Список комітів проєкту
+$ git log
+Порівняння файлів при внесених комітах (останніх 2)
+$ git log -p -2
+Скорочена статистика
+$ git log --stat
+Вивід змін по рядках
+$ git log --pretty=oneline
+Вивід за користувацьким форматом
+$ git log --pretty=format:"%h - %an, %ar : %s"
+
+Таблиця 
+Опція		Опис Виводу
+%H		Хеш коміту
+%h		Скорочений хеш коміту
+%T		Хеш дерева
+%t		Скорочений хеш дерева
+%P		Хеши батьків
+%p		Скорочені хеши батьків
+%an		Ім’я автора
+%ae		Поштова адреса автора
+%ad		Дата автора (формат враховує опцію --date=option)
+%ar		Відносна дата автора
+%cn		Ім’я користувача, що створив коміт
+%ce		Поштова адреса фіксатора
+%cd		Дата фіксатора
+%cr		Відносна дата фіксатора
+%s		Тема
+
+Виведення змін у графічному вигляді (ASCII)
+$ git log --pretty=format:"%h %s" --graph
+
+Список комітів за останні два тижні:
+$ git log --since=2.weeks
+
+Перегляд комітів над функцією в коді проєкту
+$ git log -S function_name
+
+Список змін лише в файлі
+$ git log -- path/to/file
+
+
+ОПЕРАЦІЇ ВІДМІНИ
+Редагування останнього коміту
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+
+Вилучення файлу з індексування
+$ git reset HEAD somefile
+
+Скасування змін у індексованому файлі
+$ git checkout -- CONTRIBUTING.md
+
+
+ВЗАЄМОДІЯ ЗІ СХОВИЩАМ 
+(надсилання (pushing) та отримання (pulling) )
+
+Перегляд віддалених сховищ
+$ git remote 
+Список зв'язаних посилань
+$ git remote -v
+
+Додавання віддалених сховищ
+$ git remote add pb https://github.com/paulboone/ticgit
+(де pb (або origin), лінк на віддалене сховище)
+
+Отримання (fetching) та затягування (pulling) з ваших віддалених сховищ
+$ git fetch pb
+
+*git fetch лише завантажує дані до вашого локального сховища — вона автоматично не зливає їх з вашою роботою, та не змінює вашу поточну працю.
+
+** git pull автоматично отримує зміни та зливає віддалену гілку до вашої поточної гілки. 
+
+*** git clone автоматично налаштовує вашу локальну гілку master слідкувати за віддаленою гілкою master (хоча вона може називатись і по іншому) на віддаленому сервері, з якого ви зробили клон.
+
+
+Надсилання змін до віддалених сховищ
+*git push <назва сховища> <назва гілки>
+$ git push origin master
+
+Огляд віддаленого сховища
+$ git remote show origin
+
+Перейменування та видалення віддалених сховищ
+
+$ git remote rename pb paul
+$ git remote remove paul
+
+
+РОБОТА З ТЕГАМИ (tags)
+$ git tag
+v1.0
+v2.0
+
+Створення тегів
+
+Анотовані теги
+$ git tag -a v1.4 -m "my version 1.4"
+$ git tag
+v0.1
+v1.3
+v1.4
+
+$ git show v1.4
+tag v1.4
+Tagger: Ben Straub <ben@straub.cc>
+Date:   Sat May 3 20:19:12 2014 -0700
+
+my version 1.4
+
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gee-mail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+
+Легкі теги
+$ git tag v1.4-lw
+$ git tag
+v0.1
+v1.3
+v1.4
+v1.4-lw
+v1.5
+
+$ git show v1.4-lw
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon <schacon@gee-mail.com>
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+
+Позначення коміту,як тегу
+$ git log --pretty=oneline
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+a6b4c97498bd301d84096da251c98a07c7723e65 Create write support
+0d52aaab4479697da7686c15f77a3d64d9165190 One more thing
+6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'
+0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc Add commit function
+4682c3261057305bdd616e23b64b0857d832627b Add todo file
+166ae0c4d3f420721acbb115cc33848dfcc2121a Create write support
+9fceb02d0ae598e95dc970b74767f19372d61af8 Update rakefile
+964f16d36dfccde844893cac5b347e7b3d44abbc Commit the todo
+8a5cbc430f1a9c3d00faaeffd07798508422908a Update readme
+
+
+$ git tag -a v1.2 9fceb02
+
+
+Відправка тегу
+$ git push origin v1.5
+
+Відправка усіх тегів
+$ git push origin --tags
+
+
+Видалення тегів
+
+Локально:
+$ git tag -d v1.4-lw
+Deleted tag 'v1.4-lw' (was e7d5add)
+
+Віддалено:
+$ git push origin --delete <tagname>
+
+
+ПСЕВДОНІМИ (aliases)
+*скорочені назви стандартниих команд
+
+
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+$ git config --global alias.ci commit
+$ git config --global alias.st status
+
+
+ГІЛКИ (branches)
+
+Створення гілки
+$ git branch testing
+
+Перегляд локальних гілок
+$ git branch
+
+Перегляд локальних гілок і їх останніх комітів
+$ git branch -v
+
+
+
+Якщо ж у вас вже є локальна гілка і ви хочете прив’язати її до віддаленої, чи змінити віддалену (upstream) гілку, можете використовувати опції -u чи --set-upstream-to до команди git branch.
+
+$ git branch -u origin/serverfix
+
+
+
+Перегляд вказівника на гілку
+$ git log --oneline --decorate
+f30ab (HEAD -> master, testing) add feature #32 - ability to add new formats to the central interface
+34ac2 Fixed bug #1328 - stack overflow under certain conditions
+98ca9 The initial commit of my project
+
+Переключення гілок
+$ git checkout testing
+
+Створення гілки і переключення
+$ git checkout -b testing
+
+$ git fetch origin
+
+Варто зауважити, що, коли ви отримуєте зміни (за допомогою fetch), — насправді це нові віддалено-відслідковувані гілки, а не автоматичні локальні копії цих гілок, які ви можете редагувати. Іншими словами, в цьому випадку, ви не маєте нової гілки serverfix, а просто вказівку на origin/serverfix, яку не можете змінювати.
+
+Щоб злити ці отримані зміни в вашу поточну робочу гілку виконайте git merge origin/serverfix. Якщо хочете мати свою власну гілку serverfix і працювати над нею, можете створити її, базуючись на віддалено-відслідковуваній гілці:
+
+$ git checkout -b serverfix origin/serverfix
+
+
+Злиття гілок
+$ git checkout master
+$ git merge testing
+*якщо кількість комітів у testing більше 1 злиття виконують у новий (merge commit)
+
+Видалення гілки (бо вказують на той же коміт)
+$ git branch -d testing
+
+Видаляння віддалених гілок
+$ git push origin --delete serverfix
+
+
+ПЕРЕБАЗОВУВАННЯ (rebase)
+Git має два основні способи інтегрувати зміни з гілки в гілку: merge (зливання) та rebase(перебазовування). За допомогою rebase, ви можете взяти всі зміни (patches), що були в комітах одної гілки та відтворити їх на іншій гілці.
+КРОК 1.
+$ git checkout experiment
+$ git rebase master
+
+
+Тепер ви можете повернутися на master та зробити злиття перемотуванням (fast-forward merge).
+
+КРОК 2.
+$ git checkout master
+$ git merge experiment
+
+
+
+
+
+
