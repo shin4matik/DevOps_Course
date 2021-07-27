@@ -161,6 +161,43 @@ http://igorka.com.ua/kursy-linux/
 https://linuxcommand.org/tlcl.php
 
 
+## Заняття 5
+https://youtu.be/V_xQuJAzNjc
+
+
+Домашнє завдання: LAMP+SSL
+
+Література:
+https://www.reddit.com/r/SQL/wiki/index
+https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
+
+
+
+## Заняття 6
+
+Load balancing
+LAMP= LA+LM+LP
+
+DNS
+DNS-cache
+
+/etc/hosts
+
+192.168.1.152 	myexample.com //перенаправлення ігноруючи DNS
+
+Listen ports:
+lsof -i P -n
+netstat -tulpn
+
+
+
+Домашнє завдання:
+Скрипт установки: LAMP+CMS (wordpress)
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack 
 
 
 
