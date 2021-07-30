@@ -70,6 +70,13 @@ createSSLcertificate(){
 	sudo a2ensite default-ssl
 }
 
+testPHP (){
+sudo tee -a /var/www/html/index.php > /dev/null <<EOT
+<?php
+phpinfo();
+?>
+EOT
+}
 
 setPermissions() {
 	echo -e "\n ${Cyan} Setting Ownership for /var/www.. ${Color_Off}"
@@ -77,17 +84,6 @@ setPermissions() {
 }
 
 
-
-
-testAll(){
-sudo echo "<?php
-phpinfo();
-?>" >>/var/www/html/index.php
-
-
-
-
-}
 # RUN
 update
 configureUFW
@@ -96,8 +92,8 @@ restartApache
 installMariaDB
 installPHP
 createSSLcertificate
+testPHP
 setPermissions
-testAll
 
 
 
