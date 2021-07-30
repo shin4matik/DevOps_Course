@@ -176,7 +176,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 
 ## Заняття 6
-
+https://youtu.be/iDKVliYPdns
 Load balancing
 LAMP= LA+LM+LP
 

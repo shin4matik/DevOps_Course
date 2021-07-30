@@ -80,13 +80,9 @@ setPermissions() {
 
 
 testAll(){
-sudo nano /var/www/html/index.php
------------
-<?php
+sudo echo "<?php
 phpinfo();
-?>
------------
-
+?>" >>/var/www/html/index.php
 
 
 
