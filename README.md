@@ -177,6 +177,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 ## Заняття 6
 https://youtu.be/iDKVliYPdns
+
 Load balancing
 LAMP= LA+LM+LP
 
@@ -198,6 +199,29 @@ netstat -tulpn
 
 
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack 
+
+## Заняття 7
+https://youtu.be/OD9bU6enr98
+
+Docker
+
+ДЗ: розгляньте докер документацію
+https://docs.docker.com/get-started/overview/
+https://www.docker.com/resources/what-container
+
+Теорія:
+https://habr.com/ru/company/southbridge/blog/515508/
+Туторіал:
+https://habr.com/ru/company/ruvds/blog/438796/
+
+## Заняття 7.5
+https://youtu.be/lsySv4wyCtk
+
+
+Wordpress with Docker
+
+Теорія:
+https://upcloud.com/community/tutorials/wordpress-with-docker/
 
 
 

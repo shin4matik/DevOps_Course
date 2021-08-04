@@ -106,3 +106,4 @@ setPermissions
 #THANK'S
 #https://github.com/aamnah/bash-scripts/blob/master/install/amp_debian.sh
 #https://www.serverkaka.com/2018/12/install-lamp-stack-in-ubuntu-using-shell-script.html
+# https://gist.github.com/Mins/4602864

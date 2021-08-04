@@ -103,4 +103,5 @@ sudo systemctl restart apache2
 
 
 # THANKS
-https://gist.github.com/bgallagh3r/2853221
+#https://gist.github.com/bgallagh3r/2853221
+#https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-with-lamp-on-debian-10
