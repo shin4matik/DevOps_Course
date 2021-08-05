@@ -221,7 +221,7 @@ https://youtu.be/lsySv4wyCtk
 Wordpress with Docker
 
 Теорія:
-https://upcloud.com/community/tutorials/wordpress-with-docker/
+cat https://upcloud.com/community/tutorials/wordpress-with-docker/
 
 
 ## Заняття 8 

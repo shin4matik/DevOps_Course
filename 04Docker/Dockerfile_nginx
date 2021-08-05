@@ -1,6 +1,6 @@
-FROM ubuntu:21.04
+FROM ubuntu:20.04
 RUN apt-get update
 RUN apt-get install -y nginx
-COPY index.html /usr/share/nginx/html/
-ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+COPY index.html /var/www/html/index.nginx-debian.html
 EXPOSE 80
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]

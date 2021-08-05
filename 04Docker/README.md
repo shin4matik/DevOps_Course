@@ -97,7 +97,7 @@ EXPOSE 80
 
 ENV VAR1 "HELLO"
 
-ENV TZ Europe/Kyiv
+ENV TZ=Europe/Kyiv
 
 USER 1001
 
