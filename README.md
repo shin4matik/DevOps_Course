@@ -224,6 +224,54 @@ Wordpress with Docker
 https://upcloud.com/community/tutorials/wordpress-with-docker/
 
 
+## Заняття 8 
+
+https://youtu.be/hOXtvgFrSp4
+
+### Приклади файлів:
+
+#### Apache Dockerfile
+
+```bash
+FROM ubuntu:21.04
+RUN apt-get update && apt-get install -y apache2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2
+ENV APACHE_RUN_DIR /var/www/html
+
+ENV APACHE_PID_FILE ???
+ServerName
+
+
+EXPOSE 80
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+```
+
+#### Nginx Dockerfile - to fix
+
+```bash
+FROM ubuntu:21.04
+RUN apt-get update
+RUN apt-get install -y nginx
+COPY index.html /usr/share/nginx/html/
+ENTRYPOINT ["/usr/sbin/nginx", "-g", "daemon off;"]
+EXPOSE 80
+```
+
+```html
+index.html
+<!doctype html>
+<html>
+  <head>
+    <title>HELLO!</title>
+  </head>
+  <body>
+    <p>Blah, blah. Blah, <strong>BLAH!</strong></p>
+  </body>
+</html>
+```
+
 
 
 
