@@ -274,6 +274,18 @@ index.html
 
 
 
+## Заняття 9
+
+Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)
+
+
+
+
+
+https://github.com/dockersamples/example-voting-app
+https://docs.docker.com/engine/swarm/ 
+https://docs.docker.com/compose/ 
+
 
 
 
