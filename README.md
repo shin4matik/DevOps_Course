@@ -273,18 +273,36 @@ index.html
 ```
 
 
-
-## Заняття 9
-
+## Заняття 8.5
+https://youtu.be/aWDpfjNTfO0
 Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)
-
-
-
-
 
 https://github.com/dockersamples/example-voting-app
 https://docs.docker.com/engine/swarm/ 
 https://docs.docker.com/compose/ 
+
+
+
+## Заняття 9
+https://youtu.be/CH-mSjPdqmM
+
+Terraform +  AWS
+
+Реєстрація:
+https://aws.amazon.com/
+Зверніть увагу на меню Documentation та Learn
+
+Конфігурація та ключі на AWS:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
+
+https://www.terraform.io/
+зкачуйте Cli та читайте документацію
+
+Visual Studio Code
+https://code.visualstudio.com/
+
+Відео про початки тераформу та авс:
+https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 
