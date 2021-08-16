@@ -307,4 +307,18 @@ https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 
+## Заняття 9.5
+
+VPC (virtual private cloud)
+
+
+### Networking
+IPv4, netmask
+
+CIDR block 
+(public IP, private IP, netmask, subnet)
+
+VLSM subnets
+
+
 

@@ -19,7 +19,7 @@
 
 * terraform plan
 
-* terraform apply (yes)
+* terraform apply (yes) // --auto-approve
 
 * terraform destroy
 
@@ -120,10 +120,44 @@ resource "aws_security_group" "my_webserver" {
 }
 
 ```
+
+## SAMPLE 3. Create VPC by DO Provider
+```bash
+resource "digitalocean_vpc" "example_vpc" {
+  name     = "example-project-network"
+  region   = "fra1"
+#  ip_range = "10.114.0.0/20"
+}
+
+resource "digitalocean_droplet" "server" {
+  name     = "www-01"
+  size     = "s-1vcpu-1gb"
+  image    = "ubuntu-20-04-x64"
+  region   = "fra1"
+  vpc_uuid = digitalocean_vpc.example_vpc.id
+}
+
+
+
+```
+
+### VPC info
+* https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/vpc
+* https://docs.digitalocean.com/products/networking/vpc/
+* https://docs.digitalocean.com/products/networking/vpc/resources/best-practices/
+* https://www.youtube.com/watch?v=nbo5HrmZjXo
+* https://youtu.be/Q3Dxtkgsh9I  -->> (https://github.com/do-community/terraform-sample-digitalocean-architectures/tree/master/01-minimal-web-db-stack)
+
+
+
 ### Info
 
-https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs
-https://www.digitalocean.com/community/tutorials/how-to-use-terraform-with-digitalocean
-https://awsregion.info/
+* https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs
+* https://www.digitalocean.com/community/tutorials/how-to-use-terraform-with-digitalocean
+* https://docs.digitalocean.com/reference/terraform/getting-started/
+* https://youtu.be/UqxebzWKigY
+* https://awsregion.info/
+
+
 
 
