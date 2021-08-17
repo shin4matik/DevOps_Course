@@ -308,6 +308,7 @@ https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 ## Заняття 9.5
+https://youtu.be/N0_UJskLJfU
 
 VPC (virtual private cloud)
 

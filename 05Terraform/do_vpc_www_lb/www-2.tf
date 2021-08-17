@@ -14,9 +14,9 @@ resource "digitalocean_droplet" "www-2" {
     timeout = "2m"
   }
 */
-    user_data              = <<EOF
-    sudo apt update
-    sudo apt install -y nginx
-    sudo systemctl start nginx
-    EOF
+    user_data = <<EOF
+apt update
+apt install -y nginx
+systemctl start nginx
+EOF
 }

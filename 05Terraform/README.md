@@ -21,6 +21,8 @@
 
 * terraform apply (yes) // --auto-approve
 
+* terraform show
+
 * terraform destroy
 
 
@@ -39,28 +41,48 @@ terraform {
 }
 
 variable "do_token" {}
+variable "pvt_key" {}
+
 provider "digitalocean" {
     token = var.do_token
 
 }
 
-resource "digitalocean_droplet" "ub20_droplet" {
+resource "digitalocean_droplet" "server" {
   image  = "ubuntu-20-04-x64"
-  name   = "ub20-1"
+  name   = "server"
   region = "fra1"
   size   = "s-1vcpu-1gb"
+  ssh_keys = [" <fingerprint> "]
+
+connection {
+    host = self.ipv4_address
+    user = "root"
+    type = "ssh"
+    private_key = file(var.pvt_key)
+    timeout = "2m"
+  }
+
+
+  provisioner "remote-exec" {
+    inline = [
+      "export PATH=$PATH:/usr/bin",
+      # install nginx
+      "sudo apt update",
+      "sudo apt install -y nginx"
+    ]
+  }
 }
+
 ```
 
 ### Terraform commands
 
 * terraform init
 
-* terraform plan -var "do_token=${DO_PAT}"
+* terraform plan -var "do_token=${DO_PAT}" -var "pvt_key=$HOME/.ssh/id_rsa"
 
-* terraform apply -var "do_token=${DO_PAT}"
-
-
+* terraform apply -var "do_token=${DO_PAT}" -var "pvt_key=$HOME/.ssh/id_rsa"
 
 
 
