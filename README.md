@@ -306,7 +306,6 @@ https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 
-
 ## Заняття 9.5
 https://youtu.be/N0_UJskLJfU
 
@@ -320,6 +319,25 @@ CIDR block
 (public IP, private IP, netmask, subnet)
 
 VLSM subnets
+
+
+
+## Заняття 10
+
+Kubernetes (K8s)
+
+
+https://kubernetes.io/docs/tutorials/kubernetes-basics/ 
+https://kubernetes.io/docs/tutorials/ 
+https://www.youtube.com/watch?v=X48VuDVv0do 
+
+AWS
+https://www.youtube.com/watch?v=ulprqHHWlng 
+
+
+
+
+
 
 
 
