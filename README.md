@@ -323,7 +323,7 @@ VLSM subnets
 
 
 ## Заняття 10
-
+https://youtu.be/tsemPofi2aA
 Kubernetes (K8s)
 
 

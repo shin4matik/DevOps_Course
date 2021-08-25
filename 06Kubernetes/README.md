@@ -37,19 +37,21 @@
 
 
 ### Basic CMD
-
+```
 minikube start --vm-driver=kvm //start k8s cluster
 kubectl get nodes		//list of nodes
 
 
 kubectl run firstpod --generator=run-pod/v1 --image=httpd:latest --port=80
-
+```
 ### Status cmd
+```
 minikube status
 kubectl get componentstatuses
 kubectl cluster-info
-
+```
 ### Other status cmd
+```
 kubectl get pod
 kubectl get services
 kubectl get deployment
@@ -57,26 +59,30 @@ kubectl get replicaset
 kubectl get all
 kubectl get hpa 	//Horizontal Pods Autoscaling
 kubectl get rs 	//Replica Set
-
+```
 ### Create POD (one replica)
+```
 kubectl create deployment nginx-depl --image=nginx
 kubectl edit deployment nginx-depl
-
+```
 ### Logs, describes and debuging
+```
 kubectl logs nginx-depl
 kubectl describe nginx-depl
 kubectl exec -it nginx-depl -- bin/bash  //enter into container
-
+```
 ### Delete POD
+```
 kubectl delete deployment nginx-depl
-
+```
 
 ## Use commands is inpractical but always use config file
+```
 kubectl apply  -f [filename].yaml
 kubectl delete -f [filename].yaml
 
 kubectl port-forward me-web 1234:80
-
+```
 ## Work with PODs 
 ```bash
 apiVersion: v1
@@ -150,6 +156,18 @@ spec:
       targetAverageUtilization: 80
 ```
 
+## Work with SERVICEs
+
+### Service Types
+* ClusterIP
+* NodePort
+* ExternalName
+* LoadBalancer (only for clouds providers)
+
+### Examples:
+
+https://github.com/adv4000/k8s-lessons/tree/master/Lesson-10-Services
+
 
 
 
@@ -197,10 +215,14 @@ spec:
 
 ```
 
-![alt](img/start_minikube.png "minikube")
+
+## Ingress Controller
+![alt](img/ingress_controller.png "minikube")
+
 
 
 ## Install Minikube & Kubectl
+![alt](img/start_minikube.png "minikube")
 * https://minikube.sigs.k8s.io/docs/start/
 * https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
