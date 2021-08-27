@@ -1,8 +1,8 @@
 # SoftServeInc DevOps crash course
 
 
-<details>
-<summary><h3>Заняття 0. Вступ. Основи Git</h3></summary>
+
+<details><summary><b>Заняття 0. Вступ. Основи Git</b></summary>
 <br/>
 Зареєструйтеся на https://github.com/
 Пройдіть тренування на https://lab.github.com/ під назвою Introduction to GitHub
@@ -17,8 +17,8 @@ https://learngitbranching.js.org/
 
 ******
 
-<details>
-<summary><h3>Заняття 1. Git</h3></summary>
+
+<details><summary><b>Заняття 1. Git</b></summary>
 <br/>
 Встановлення Linux
 Основні поняття системи контролю версій
@@ -44,12 +44,15 @@ https://www.youtube.com/watch?v=0SJCYPsef54
 ******
 
 <details>
-<summary><h3> Заняття 2. SSH. Git. OSI model</h3></summary>
+<summary><b> Заняття 2. SSH. Git. OSI model</b></summary>
 <br/>
 https://youtu.be/QtcFYeDdiS8
- 
+</details>
+
+******
+
 <details>
-<summary><h3>Заняття 2.5. SSH. SCP</h3></summary>
+<summary><b>Заняття 2.5. SSH. SCP</b></summary>
 <br/>
 https://youtu.be/fXSlzZCgCcs
 </details>
@@ -57,7 +60,7 @@ https://youtu.be/fXSlzZCgCcs
 ******
 
 <details>
-<summary><h3>Заняття 3. Linux CLI</h3></summary>
+<summary><b>Заняття 3. Linux CLI</b></summary>
 <br/>
 https://youtu.be/B0iS-Lk9UE4
 
@@ -108,7 +111,7 @@ chown
 ******
 
 <details>
-<summary><h3>Заняття 3.5</h3></summary>
+<summary><b>Заняття 3.5</b></summary>
 <br/>
 https://youtu.be/6y0zAfY4MKU
 
@@ -142,7 +145,7 @@ alias
 ****** 
 
 <details>
-<summary><h3> Заняття 4. </h3></summary>
+<summary><b> Заняття 4. </b></summary>
 <br/>
 https://youtu.be/YGcPuWzmJ-s
 
@@ -183,7 +186,7 @@ https://linuxcommand.org/tlcl.php
 ******
 
 <details>
-<summary><h3>Заняття 5</h3></summary>
+<summary><b>Заняття 5</b></summary>
 <br/>
 https://youtu.be/V_xQuJAzNjc
 
@@ -201,7 +204,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 
 <details>
-<summary><h3>Заняття 6</h3></summary>
+<summary><b>Заняття 6</b></summary>
 <br/>
 https://youtu.be/iDKVliYPdns
 
@@ -232,7 +235,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubu
 
 
 <details>
-<summary><h3>Заняття 7</h3></summary>
+<summary><b>Заняття 7</b></summary>
 <br/>
 https://youtu.be/OD9bU6enr98
 
@@ -252,7 +255,7 @@ https://habr.com/ru/company/ruvds/blog/438796/
 
 
 <details>
-<summary><h3>Заняття 7.5</h3></summary>
+<summary><b>Заняття 7.5</b></summary>
 <br/>
 https://youtu.be/lsySv4wyCtk
 
@@ -266,7 +269,7 @@ cat https://upcloud.com/community/tutorials/wordpress-with-docker/
 ******
 
 <details>
-<summary><h3>Заняття 8 </h3></summary>
+<summary><b>Заняття 8 </b></summary>
 <br/>
 
 https://youtu.be/hOXtvgFrSp4
@@ -319,7 +322,7 @@ index.html
 ******
 
 <details>
-<summary><h3>Заняття 8.5</h3></summary>
+<summary><b>Заняття 8.5</b></summary>
 <br/>
 https://youtu.be/aWDpfjNTfO0
 Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)
@@ -333,7 +336,7 @@ https://docs.docker.com/compose/
 
 
 <details>
-<summary><h3> Заняття 9</h3></summary>
+<summary><b> Заняття 9</b></summary>
 <br/>
 https://youtu.be/CH-mSjPdqmM
 
@@ -360,7 +363,7 @@ https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 <details>
-<summary><h3> Заняття 9.5</h3></summary>
+<summary><b> Заняття 9.5</b></summary>
 <br/>
 https://youtu.be/N0_UJskLJfU
 
@@ -374,11 +377,14 @@ CIDR block
 (public IP, private IP, netmask, subnet)
 
 VLSM subnets
+</details>
+
+******
 
 
 
 <details>
-<summary><h3> Заняття 10</h3></summary>
+<summary><b> Заняття 10</b></summary>
 <br/>
 https://youtu.be/tsemPofi2aA
 Kubernetes (K8s)
