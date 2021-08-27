@@ -1,7 +1,9 @@
 # SoftServeInc DevOps crash course
 
-## Заняття 0. Вступ. Основи Git
 
+<details>
+<summary><h3>Заняття 0. Вступ. Основи Git</h3></summary>
+<br/>
 Зареєструйтеся на https://github.com/
 Пройдіть тренування на https://lab.github.com/ під назвою Introduction to GitHub
 
@@ -11,10 +13,13 @@ https://git-scm.com/book/en/v2 до розділу 3. Git Branching включн
 Додаткове:
 https://roadmap.sh/devops
 https://learngitbranching.js.org/
+</details>
 
+******
 
-
-## Заняття 1. Git
+<details>
+<summary><h3>Заняття 1. Git</h3></summary>
+<br/>
 Встановлення Linux
 Основні поняття системи контролю версій
 Підключення до серверу Git за допомого SSH
@@ -34,19 +39,26 @@ https://www.youtube.com/watch?v=DVRQoVRzMIY
 https://www.youtube.com/watch?v=P6jD966jzlk
 https://www.youtube.com/watch?v=0SJCYPsef54
 
+</details>
 
+******
 
-## Заняття 2. SSH. Git. OSI model
+<details>
+<summary><h3> Заняття 2. SSH. Git. OSI model</h3></summary>
+<br/>
 https://youtu.be/QtcFYeDdiS8
  
-
-## Заняття 2.5. SSH. SCP
+<details>
+<summary><h3>Заняття 2.5. SSH. SCP</h3></summary>
+<br/>
 https://youtu.be/fXSlzZCgCcs
+</details>
 
+******
 
-
-
-## Заняття 3. Linux CLI
+<details>
+<summary><h3>Заняття 3. Linux CLI</h3></summary>
+<br/>
 https://youtu.be/B0iS-Lk9UE4
 
 список команд:
@@ -91,9 +103,13 @@ id
 chmod
 chown
 
+</details>
 
+******
 
-## Заняття 3.5
+<details>
+<summary><h3>Заняття 3.5</h3></summary>
+<br/>
 https://youtu.be/6y0zAfY4MKU
 
 watch
@@ -121,10 +137,13 @@ alias
 \ls - bypass alias
 
 Домашнє - розгляньте $PATH, Напишіть свій скрипт, пушніть скрипт у гіт (скрипт повинен спрацювати при зкачуванні на інший убунту хост).
- 
+</details>
 
+****** 
 
-## Заняття 4. 
+<details>
+<summary><h3> Заняття 4. </h3></summary>
+<br/>
 https://youtu.be/YGcPuWzmJ-s
 
 Команди:
@@ -159,9 +178,13 @@ echo $(date)  old syntax echo date    command expansion or substitution
 Література:
 http://igorka.com.ua/kursy-linux/
 https://linuxcommand.org/tlcl.php
+</details>
 
+******
 
-## Заняття 5
+<details>
+<summary><h3>Заняття 5</h3></summary>
+<br/>
 https://youtu.be/V_xQuJAzNjc
 
 
@@ -172,10 +195,14 @@ https://www.reddit.com/r/SQL/wiki/index
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04
 https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
+</details>
+
+******
 
 
-
-## Заняття 6
+<details>
+<summary><h3>Заняття 6</h3></summary>
+<br/>
 https://youtu.be/iDKVliYPdns
 
 Load balancing
@@ -199,8 +226,14 @@ netstat -tulpn
 
 
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack 
+</details>
 
-## Заняття 7
+******
+
+
+<details>
+<summary><h3>Заняття 7</h3></summary>
+<br/>
 https://youtu.be/OD9bU6enr98
 
 Docker
@@ -213,8 +246,14 @@ https://www.docker.com/resources/what-container
 https://habr.com/ru/company/southbridge/blog/515508/
 Туторіал:
 https://habr.com/ru/company/ruvds/blog/438796/
+</details>
 
-## Заняття 7.5
+******
+
+
+<details>
+<summary><h3>Заняття 7.5</h3></summary>
+<br/>
 https://youtu.be/lsySv4wyCtk
 
 
@@ -222,9 +261,13 @@ Wordpress with Docker
 
 Теорія:
 cat https://upcloud.com/community/tutorials/wordpress-with-docker/
+</details>
 
+******
 
-## Заняття 8 
+<details>
+<summary><h3>Заняття 8 </h3></summary>
+<br/>
 
 https://youtu.be/hOXtvgFrSp4
 
@@ -271,19 +314,27 @@ index.html
   </body>
 </html>
 ```
+</details>
 
+******
 
-## Заняття 8.5
+<details>
+<summary><h3>Заняття 8.5</h3></summary>
+<br/>
 https://youtu.be/aWDpfjNTfO0
 Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)
 
 https://github.com/dockersamples/example-voting-app
 https://docs.docker.com/engine/swarm/ 
 https://docs.docker.com/compose/ 
+</details>
+
+******
 
 
-
-## Заняття 9
+<details>
+<summary><h3> Заняття 9</h3></summary>
+<br/>
 https://youtu.be/CH-mSjPdqmM
 
 Terraform +  AWS
@@ -303,10 +354,14 @@ https://code.visualstudio.com/
 
 Відео про початки тераформу та авс:
 https://www.youtube.com/watch?v=SLB_c_ayRMo
+</details>
+
+******
 
 
-
-## Заняття 9.5
+<details>
+<summary><h3> Заняття 9.5</h3></summary>
+<br/>
 https://youtu.be/N0_UJskLJfU
 
 VPC (virtual private cloud)
@@ -322,7 +377,9 @@ VLSM subnets
 
 
 
-## Заняття 10
+<details>
+<summary><h3> Заняття 10</h3></summary>
+<br/>
 https://youtu.be/tsemPofi2aA
 Kubernetes (K8s)
 
@@ -334,7 +391,9 @@ https://www.youtube.com/watch?v=X48VuDVv0do
 AWS
 https://www.youtube.com/watch?v=ulprqHHWlng 
 
+</details>
 
+******
 
 
 
