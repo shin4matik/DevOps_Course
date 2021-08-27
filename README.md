@@ -111,7 +111,7 @@ chown
 ******
 
 <details>
-<summary><b>Заняття 3.5</b></summary>
+<summary><b>Заняття 3.5. More CMD</b></summary>
 <br/>
 https://youtu.be/6y0zAfY4MKU
 
@@ -145,7 +145,7 @@ alias
 ****** 
 
 <details>
-<summary><b> Заняття 4. </b></summary>
+<summary><b> Заняття 4. More CMD 2</b></summary>
 <br/>
 https://youtu.be/YGcPuWzmJ-s
 
@@ -186,7 +186,7 @@ https://linuxcommand.org/tlcl.php
 ******
 
 <details>
-<summary><b>Заняття 5</b></summary>
+<summary><b>Заняття 5. VM & Server apps</b></summary>
 <br/>
 https://youtu.be/V_xQuJAzNjc
 
@@ -204,7 +204,7 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl
 
 
 <details>
-<summary><b>Заняття 6</b></summary>
+<summary><b>Заняття 6. LAMP</b></summary>
 <br/>
 https://youtu.be/iDKVliYPdns
 
@@ -235,11 +235,11 @@ https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubu
 
 
 <details>
-<summary><b>Заняття 7</b></summary>
+<summary><b>Заняття 7. Docker</b></summary>
 <br/>
 https://youtu.be/OD9bU6enr98
 
-Docker
+
 
 ДЗ: розгляньте докер документацію
 https://docs.docker.com/get-started/overview/
@@ -255,12 +255,9 @@ https://habr.com/ru/company/ruvds/blog/438796/
 
 
 <details>
-<summary><b>Заняття 7.5</b></summary>
+<summary><b>Заняття 7.5. Wordpress with Docker</b></summary>
 <br/>
 https://youtu.be/lsySv4wyCtk
-
-
-Wordpress with Docker
 
 Теорія:
 cat https://upcloud.com/community/tutorials/wordpress-with-docker/
@@ -269,7 +266,7 @@ cat https://upcloud.com/community/tutorials/wordpress-with-docker/
 ******
 
 <details>
-<summary><b>Заняття 8 </b></summary>
+<summary><b>Заняття 8. Docker 2</b></summary>
 <br/>
 
 https://youtu.be/hOXtvgFrSp4
@@ -322,10 +319,10 @@ index.html
 ******
 
 <details>
-<summary><b>Заняття 8.5</b></summary>
+<summary><b>Заняття 8.5. Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)</b></summary>
 <br/>
 https://youtu.be/aWDpfjNTfO0
-Orchestration (Kubernetes, Terraform, Docker Swarm, Docker Compose)
+
 
 https://github.com/dockersamples/example-voting-app
 https://docs.docker.com/engine/swarm/ 
@@ -336,11 +333,10 @@ https://docs.docker.com/compose/
 
 
 <details>
-<summary><b> Заняття 9</b></summary>
+<summary><b> Заняття 9. Terraform +  AWS</b></summary>
 <br/>
 https://youtu.be/CH-mSjPdqmM
 
-Terraform +  AWS
 
 Реєстрація:
 https://aws.amazon.com/
@@ -363,11 +359,9 @@ https://www.youtube.com/watch?v=SLB_c_ayRMo
 
 
 <details>
-<summary><b> Заняття 9.5</b></summary>
+<summary><b> Заняття 9.5. VPC (virtual private cloud)</b></summary>
 <br/>
 https://youtu.be/N0_UJskLJfU
-
-VPC (virtual private cloud)
 
 
 ### Networking
@@ -384,10 +378,10 @@ VLSM subnets
 
 
 <details>
-<summary><b> Заняття 10</b></summary>
+<summary><b> Заняття 10. Kubernetes (K8s)</b></summary>
 <br/>
 https://youtu.be/tsemPofi2aA
-Kubernetes (K8s)
+
 
 
 https://kubernetes.io/docs/tutorials/kubernetes-basics/ 
