@@ -32,13 +32,14 @@
 
 
 ## Minikube (one Node cluster)
+
 * worker processes
 * master processes
 
 
 ### Basic CMD
 ```
-minikube start --vm-driver=kvm //start k8s cluster
+minikube start --vm-driver=kvm //start minikube cluster
 kubectl get nodes		//list of nodes
 
 
@@ -52,7 +53,7 @@ kubectl cluster-info
 ```
 ### Other status cmd
 ```
-kubectl get pod
+kubectl get pod	// kubectl get pod -o wide >> list with IP
 kubectl get services
 kubectl get deployment
 kubectl get replicaset
@@ -60,11 +61,14 @@ kubectl get all
 kubectl get hpa 	//Horizontal Pods Autoscaling
 kubectl get rs 	//Replica Set
 ```
-### Create POD (one replica)
+### Create POD by DEPLOYMENT (one replica)
 ```
 kubectl create deployment nginx-depl --image=nginx
-kubectl edit deployment nginx-depl
+kubectl edit deployment nginx-depl	//manual config replicas, version, etc
 ```
+
+
+
 ### Logs, describes and debuging
 ```
 kubectl logs nginx-depl
@@ -84,7 +88,7 @@ kubectl delete -f [filename].yaml
 kubectl port-forward me-web 1234:80
 ```
 ## Work with PODs 
-```bash
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -159,9 +163,9 @@ spec:
 ## Work with SERVICEs
 
 ### Service Types
-* ClusterIP
+* ClusterIP (default)
 * NodePort
-* ExternalName
+* Headless
 * LoadBalancer (only for clouds providers)
 
 ### Examples:
@@ -203,13 +207,13 @@ spec:
     matchLabels:
       app: nginx
   template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.16
+    metadata:			|
+      labels:			|
+        app: nginx		|
+    spec:			} blueprint for POD
+      containers:		|
+      - name: nginx		|	
+        image: nginx:1.16	|
         ports:
         - containerPort: 8080
 
