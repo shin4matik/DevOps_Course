@@ -33,8 +33,6 @@ docker run --name container1 -e TZ=Europe/Kyiv myimage
 Run with mount external volume
 docker run --name container1 -v /var/mylocaldir:/var/projectdir myimage
 
-
-
 Remove all containers by ID
 docker rm -f $(docker ps -qa)
 
@@ -139,6 +137,7 @@ docker-compose up -d
 ## Info
 
 https://youtu.be/I18TNwZ2Nqg
+https://youtu.be/4KbL5lbjK-M
 
 
 
