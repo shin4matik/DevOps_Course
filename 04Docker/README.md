@@ -134,10 +134,23 @@ docker-compose up -d
 
 
 
+## DockerHub 
+
+* Sing up & create repos
+* Create token and login:		docker login -u vvborys
+* Build image with name and tag: 	docker build -t vvborys/ub20apache:v1 .
+
+* Re-tagging an existing local image docker tag <existing-image> <hub-user>/<repo-name>[:<tag>]
+
+* Push image:				docker push vvborys/ub20apache:v1
+
+* Pull exising image:			docker pull vvborys/ub20apache:v1
+
+
 ## Info
 
 https://youtu.be/I18TNwZ2Nqg
 https://youtu.be/4KbL5lbjK-M
-
+https://youtu.be/QF4ZF857m44
 
 
