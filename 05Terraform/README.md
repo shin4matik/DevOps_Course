@@ -182,4 +182,3 @@ resource "digitalocean_droplet" "server" {
 
 
 
-

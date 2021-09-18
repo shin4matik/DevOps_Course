@@ -55,6 +55,7 @@ docker run -v newvolume:/var/myproject myimage
 
 ### Install Docker (Debian 10)
 -------------------------------------
+```
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
 sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release
@@ -74,11 +75,11 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
 sudo docker run hello-world
-
+```
 ----------------------------------------
 
 ### Dockerfile sample
-
+```
 FROM ubuntu:21.04
 
 RUN apt update && apt install -y apache2
@@ -101,7 +102,7 @@ USER 1001
 
 VOLUME ["/dir1","/dir2"] 
 
-
+```
 
 
 
@@ -109,7 +110,7 @@ VOLUME ["/dir1","/dir2"]
 ## Docker compose
 
 1. Create file: docker-compose.yaml
-
+```
 version: "3"
 
 services:
@@ -128,7 +129,7 @@ services:
       - TZ=Europe/Moscow
       - DISCOVERY_PERIOD_SEC=30
       - EXECUTOR_SERVICE_IMPL=PingExecutorService
-
+```
 ### Command to run
 docker-compose up -d
 
@@ -149,8 +150,8 @@ docker-compose up -d
 
 ## Info
 
-https://youtu.be/I18TNwZ2Nqg
-https://youtu.be/4KbL5lbjK-M
-https://youtu.be/QF4ZF857m44
-
+* https://youtu.be/I18TNwZ2Nqg
+* https://youtu.be/4KbL5lbjK-M
+* https://youtu.be/QF4ZF857m44
+* https://youtu.be/n9uCgUzfeRQ (https://vladilen.notion.site/Docker-2021-a72201ec8573461c8a2e62e2fcf33aa3)
 
