@@ -13,6 +13,19 @@
 * Change Automation: Complex changesets can be applied to your infrastructure with minimal human interaction. With the previously mentioned execution plan and resource graph, you know exactly what Terraform will change and in what order, avoiding many possible human errors.
 
 
+## Terraform Debian/Ubuntu Install
+
+```
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+sudo apt-get update && sudo apt-get install terraform
+```
+
+
 ## Basic Terraform CLI commands: 
 
 * terraform init
@@ -26,6 +39,37 @@
 * terraform destroy
 
 
+## Quick start 
+* Create main.tf
+```
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 2.13.0"
+    }
+  }
+}
+
+provider "docker" {}
+
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = false
+}
+
+resource "docker_container" "nginx" {
+  image = docker_image.nginx.latest
+  name  = "tutorial"
+  ports {
+    internal = 80
+    external = 8000
+  }
+}
+
+```
+* terraform init
+* terraform apply
 
 ## SAMPLE 1. Create droplet by DigitalOcean Provider
 
@@ -76,7 +120,7 @@ connection {
 
 ```
 
-### Terraform commands
+### Terraform advanced commands
 
 * terraform init
 
@@ -179,6 +223,16 @@ resource "digitalocean_droplet" "server" {
 * https://docs.digitalocean.com/reference/terraform/getting-started/
 * https://youtu.be/UqxebzWKigY
 * https://awsregion.info/
+
+
+### Terraform with libvirt
+https://youtu.be/uAMzDa_0-pE
+https://github.com/dmacvicar/terraform-provider-libvirt
+https://registry.terraform.io/providers/dmacvicar/libvirt/latest
+https://dev.to/ruanbekker/terraform-with-kvm-2d9e
+
+
+
 
 
 
